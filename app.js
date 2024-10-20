@@ -51,14 +51,23 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
-const isCharAVowel = (a) => {
-  if (a === "a") {
+const isCharAVowel = (vowel) => {
+  if (
+    vowel === "a" ||
+    vowel === "A" ||
+    vowel === "e" ||
+    vowel === "E" ||
+    vowel === "o" ||
+    vowel === "O" ||
+    vowel === "u" ||
+    vowel === "U"
+  ) {
     return "true"
   } else {
     return "false"
   }
 }
-console.log("Exercise 3 Result:", isCharAVowel("a"))
+console.log("Exercise 3 Result:", isCharAVowel("U"))
 
 /*
 Exercise 4: generateEmail()
@@ -90,10 +99,10 @@ Complete the exercise in the space below:
 */
 
 const greetUser = (theName, time) => {
-  ;(time = "morning"), "evening", "afternoon"
-  return `Good ${time} ${theName} `
+  time = "morning" && "evening" && "afternoon"
+  return `Good ${time}, ${theName}! `
 }
-console.log("Exercise 5 Result:", greetUser("Sam", "morning"))
+console.log("Exercise 5 Result:", greetUser("Sam", "afternoon"))
 
 /*
 Exercise 6: maxOfThree()
